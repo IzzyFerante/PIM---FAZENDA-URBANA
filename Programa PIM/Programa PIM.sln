@@ -5,8 +5,6 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "git.API", "WebApplication1\git.API.csproj", "{E9EF2F94-E91C-4A43-B734-97C361CF88F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBConnection", "AcessoBD\DBConnection.csproj", "{8758BF54-29D8-49FE-B542-55B46CC4A650}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{3B55D770-38EE-455D-A7F9-B516F811229C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{8AE595E7-3173-4FDF-81BA-659E795F26DF}"
@@ -15,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{019B7453-228B-4A00-9B1C-65F134968CD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{64437F90-8A26-4B17-91D7-C16770E230FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{64437F90-8A26-4B17-91D7-C16770E230FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +25,6 @@ Global
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8758BF54-29D8-49FE-B542-55B46CC4A650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8758BF54-29D8-49FE-B542-55B46CC4A650}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8758BF54-29D8-49FE-B542-55B46CC4A650}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8758BF54-29D8-49FE-B542-55B46CC4A650}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64437F90-8A26-4B17-91D7-C16770E230FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64437F90-8A26-4B17-91D7-C16770E230FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64437F90-8A26-4B17-91D7-C16770E230FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,7 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1} = {019B7453-228B-4A00-9B1C-65F134968CD2}
-		{8758BF54-29D8-49FE-B542-55B46CC4A650} = {B6039B22-459D-43C4-810C-F398DAB80B44}
 		{64437F90-8A26-4B17-91D7-C16770E230FC} = {8AE595E7-3173-4FDF-81BA-659E795F26DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
