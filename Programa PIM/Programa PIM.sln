@@ -3,7 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIM.API", "WebApplication1\PIM.API.csproj", "{E9EF2F94-E91C-4A43-B734-97C361CF88F1}"
+<<<<<<< Updated upstream
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "git.API", "WebApplication1\git.API.csproj", "{E9EF2F94-E91C-4A43-B734-97C361CF88F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{BE7225FB-903A-4C5E-A301-6C778E3FF9CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{8AE595E7-3173-4FDF-81BA-659E795F26DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{B6039B22-459D-43C4-810C-F398DAB80B44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{019B7453-228B-4A00-9B1C-65F134968CD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{211B3AEF-822B-4430-A9BE-2AFAF45DA59F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,7 +28,18 @@ Global
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EF2F94-E91C-4A43-B734-97C361CF88F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7225FB-903A-4C5E-A301-6C778E3FF9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7225FB-903A-4C5E-A301-6C778E3FF9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7225FB-903A-4C5E-A301-6C778E3FF9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7225FB-903A-4C5E-A301-6C778E3FF9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+=======
+Global
+>>>>>>> Stashed changes
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
