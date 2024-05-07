@@ -13,7 +13,7 @@ namespace DB
 
         public DBConnection()
         {
-            Connection = new NpgsqlConnection("Server=***********;Port=5432;Database=fazenda_urbana;User Id=postgres;Password=;");
+            Connection = new NpgsqlConnection("Server=IP_FELIPE;Port=5432;Database=fazenda_urbana;User Id=postgres;Password=;");
             Connection.Open();
         }
 
