@@ -1,4 +1,4 @@
-﻿namespace teste01
+﻿namespace Interface
 {
     partial class Menu_Principal
     {
@@ -28,178 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Home_btn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Vendas_btn = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.Cadastros_btn = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.Relatorios_btn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.OliveDrab;
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 560);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Home_btn);
-            this.panel1.Location = new System.Drawing.Point(3, 109);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(197, 37);
-            this.panel1.TabIndex = 0;
-            // 
-            // Home_btn
-            // 
-            this.Home_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_btn.Location = new System.Drawing.Point(16, -3);
-            this.Home_btn.Name = "Home_btn";
-            this.Home_btn.Size = new System.Drawing.Size(153, 37);
-            this.Home_btn.TabIndex = 0;
-            this.Home_btn.Text = "Home";
-            this.Home_btn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Home_btn.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(197, 100);
-            this.panel2.TabIndex = 1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Principal));
+            panel2 = new Panel();
+            panel1 = new Panel();
+            panel3 = new Panel();
+            iconemaximizar = new PictureBox();
+            iconefechar1 = new PictureBox();
+            iconerestaurar = new PictureBox();
+            iconeminimizar1 = new PictureBox();
+            iconefechar = new PictureBox();
+            iconetamnho = new PictureBox();
+            iconeminimixar = new PictureBox();
+            label1 = new Label();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconemaximizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconefechar1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconerestaurar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconefechar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconetamnho).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconeminimixar).BeginInit();
+            SuspendLayout();
+         
+            
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.Vendas_btn);
-            this.panel3.Location = new System.Drawing.Point(3, 152);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 37);
-            this.panel3.TabIndex = 1;
+            panel3.Controls.Add(iconemaximizar);
+            panel3.Controls.Add(iconefechar1);
+            panel3.Controls.Add(iconerestaurar);
+            panel3.Controls.Add(iconeminimizar1);
+            panel3.Dock = DockStyle.Right;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(115, 105);
+            panel3.TabIndex = 6;
             // 
-            // Vendas_btn
+            // iconemaximizar
             // 
-            this.Vendas_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vendas_btn.Location = new System.Drawing.Point(16, 0);
-            this.Vendas_btn.Name = "Vendas_btn";
-            this.Vendas_btn.Size = new System.Drawing.Size(153, 37);
-            this.Vendas_btn.TabIndex = 0;
-            this.Vendas_btn.Text = "Vendas";
-            this.Vendas_btn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Vendas_btn.UseVisualStyleBackColor = true;
+            iconemaximizar.BackColor = Color.DarkOliveGreen;
+            iconemaximizar.Enabled = false;
+            iconemaximizar.Image = (Image)resources.GetObject("iconemaximizar.Image");
+            iconemaximizar.Location = new Point(67, 3);
+            iconemaximizar.Name = "iconemaximizar";
+            iconemaximizar.Size = new Size(20, 20);
+            iconemaximizar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconemaximizar.TabIndex = 5;
+            iconemaximizar.TabStop = false;
+            iconemaximizar.Click += iconemaximizar_Click;
             // 
-            // panel4
+            // iconefechar1
             // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Location = new System.Drawing.Point(3, 43);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(197, 37);
-            this.panel4.TabIndex = 1;
+            iconefechar1.BackColor = Color.DarkOliveGreen;
+            iconefechar1.Enabled = false;
+            iconefechar1.Image = (Image)resources.GetObject("iconefechar1.Image");
+            iconefechar1.Location = new Point(93, 3);
+            iconefechar1.Name = "iconefechar1";
+            iconefechar1.Size = new Size(20, 20);
+            iconefechar1.SizeMode = PictureBoxSizeMode.Zoom;
+            iconefechar1.TabIndex = 2;
+            iconefechar1.TabStop = false;
+            iconefechar1.Click += iconefechar1_Click;
             // 
-            // button2
+            // iconerestaurar
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(24, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 37);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Home";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            iconerestaurar.BackColor = Color.DarkOliveGreen;
+            iconerestaurar.Enabled = false;
+            iconerestaurar.Image = (Image)resources.GetObject("iconerestaurar.Image");
+            iconerestaurar.Location = new Point(41, 3);
+            iconerestaurar.Name = "iconerestaurar";
+            iconerestaurar.Size = new Size(20, 20);
+            iconerestaurar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconerestaurar.TabIndex = 4;
+            iconerestaurar.TabStop = false;
+            iconerestaurar.Visible = false;
+            iconerestaurar.Click += pictureBox2_Click;
             // 
-            // panel5
+            // iconeminimizar1
             // 
-            this.panel5.Controls.Add(this.Cadastros_btn);
-            this.panel5.Location = new System.Drawing.Point(3, 195);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(197, 37);
-            this.panel5.TabIndex = 1;
+            iconeminimizar1.BackColor = Color.DarkOliveGreen;
+            iconeminimizar1.Enabled = false;
+            iconeminimizar1.Location = new Point(12, 3);
+            iconeminimizar1.Name = "iconeminimizar1";
+            iconeminimizar1.Size = new Size(20, 20);
+            iconeminimizar1.SizeMode = PictureBoxSizeMode.Zoom;
+            iconeminimizar1.TabIndex = 3;
+            iconeminimizar1.TabStop = false;
+            iconeminimizar1.Click += iconeminimizar1_Click;
             // 
-            // Cadastros_btn
+            // iconefechar
             // 
-            this.Cadastros_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastros_btn.Location = new System.Drawing.Point(16, 0);
-            this.Cadastros_btn.Name = "Cadastros_btn";
-            this.Cadastros_btn.Size = new System.Drawing.Size(153, 37);
-            this.Cadastros_btn.TabIndex = 0;
-            this.Cadastros_btn.Text = "Cadastros";
-            this.Cadastros_btn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Cadastros_btn.UseVisualStyleBackColor = true;
+            iconefechar.BackColor = Color.DarkOliveGreen;
+            iconefechar.Enabled = false;
+            iconefechar.Image = (Image)resources.GetObject("iconefechar.Image");
+            iconefechar.Location = new Point(93, 3);
+            iconefechar.Name = "iconefechar";
+            iconefechar.Size = new Size(20, 20);
+            iconefechar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconefechar.TabIndex = 2;
+            iconefechar.TabStop = false;
+            iconefechar.Click += pictureBox1_Click_1;
+           
             // 
-            // panel6
+            // iconeminimixar
             // 
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Controls.Add(this.Relatorios_btn);
-            this.panel6.Location = new System.Drawing.Point(3, 238);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(197, 37);
-            this.panel6.TabIndex = 1;
+            iconeminimixar.BackColor = Color.DarkOliveGreen;
+            iconeminimixar.Enabled = false;
+            iconeminimixar.Image = (Image)resources.GetObject("iconeminimixar.Image");
+            iconeminimixar.Location = new Point(21, 3);
+            iconeminimixar.Name = "iconeminimixar";
+            iconeminimixar.Size = new Size(20, 20);
+            iconeminimixar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconeminimixar.TabIndex = 3;
+            iconeminimixar.TabStop = false;
+            iconeminimixar.Click += iconeminimixar_Click;
             // 
-            // Relatorios_btn
+            // label1
             // 
-            this.Relatorios_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Relatorios_btn.Location = new System.Drawing.Point(16, 0);
-            this.Relatorios_btn.Name = "Relatorios_btn";
-            this.Relatorios_btn.Size = new System.Drawing.Size(153, 37);
-            this.Relatorios_btn.TabIndex = 0;
-            this.Relatorios_btn.Text = "Relatorios";
-            this.Relatorios_btn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Relatorios_btn.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(3, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(271, 38);
+            label1.TabIndex = 0;
+            label1.Text = "UrbanFarm Manager";
+            label1.Click += label1_Click;
             // 
             // Menu_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 560);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Menu_Principal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu_Principal";
-            this.Load += new System.EventHandler(this.Menu_Principal_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(878, 473);
+            Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Menu_Principal";
+            Text = "Menu_Principal";
+            Load += Menu_Principal_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconemaximizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconefechar1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconerestaurar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconefechar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconetamnho).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconeminimixar).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Home_btn;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button Vendas_btn;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button Cadastros_btn;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button Relatorios_btn;
+        private Panel panel2;
+        private Label label1;
+        private PictureBox iconetamnho;
+        private PictureBox iconeminimixar;
+        private PictureBox iconefechar;
+        private Panel panel1;
+        private Panel panel3;
+        private PictureBox iconemaximizar;
+        private PictureBox iconefechar1;
+        private PictureBox iconerestaurar;
+        private PictureBox iconeminimizar1;
     }
 }

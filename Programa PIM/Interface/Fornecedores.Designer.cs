@@ -1,6 +1,6 @@
-﻿namespace teste01
+﻿namespace Interface
 {
-    partial class Cadastros
+    partial class Fornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
-            // Cadastros
+            // Fornecedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 747);
-            this.Name = "Cadastros";
-            this.Text = "Cadastros";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Fornecedores";
+            Text = "Fornecedores";
+            ResumeLayout(false);
         }
 
         #endregion

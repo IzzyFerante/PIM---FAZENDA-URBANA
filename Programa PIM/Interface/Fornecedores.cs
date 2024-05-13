@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace teste01
+namespace Interface
 {
-    public partial class Vendas : Form
+    public partial class Fornecedores : Form
     {
-        public Vendas()
+        public Fornecedores()
         {
             InitializeComponent();
         }

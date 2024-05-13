@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace teste01
+﻿namespace Interface
 {
     public partial class Menu_Principal : Form
     {
@@ -17,9 +7,39 @@ namespace teste01
             InitializeComponent();
         }
 
+        
+
+
+       
+
+       
+
         private void Menu_Principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconefechar1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconemaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            iconerestaurar.Visible = false;
+            iconemaximizar.Visible = true;
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            iconerestaurar.Visible = true;
+            iconemaximizar.Visible = false;
+        }
+        
+            private void iconeminimizar1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
