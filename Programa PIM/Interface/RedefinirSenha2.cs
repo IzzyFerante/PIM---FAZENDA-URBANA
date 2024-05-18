@@ -18,13 +18,26 @@ namespace Interface
             InitializeComponent();
         }
 
-        private void iconefechar_Click(object sender, EventArgs e)
+
+        ///
+        /// Eventos icone "Fechar"
+        ///
+        private void iconFechar_Click(object sender, EventArgs e)
         {
             this.Close();
             Login Login = new Login();
             Login.Show();
         }
 
+            //Animação do cursor icone "Fechar"
+        private void iconFechar_MouseHover(object sender, EventArgs e) => Cursor = Cursors.Hand;
+
+        private void iconFechar_MouseLeave(object sender, EventArgs e) => Cursor = Cursors.Default;
+
+
+        ///
+        /// Eventos botão "Alterar Senha"
+        ///
         private void bttAlterarSenha_Click(object sender, EventArgs e)
         {
             if (mskNovaSenha.Text == mskConfirmarSenha.Text)
@@ -40,44 +53,31 @@ namespace Interface
             {
                 MessageBox.Show("Senhas divergentes!", "Atenção");
             }
-
         }
 
-        private void bttAlterarSenha_MouseHover(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Hand;
-        }
+            //Animação cursor botão "Alterar Senha"
+        private void bttAlterarSenha_MouseHover(object sender, EventArgs e) => Cursor = Cursors.Hand;
 
-        private void bttAlterarSenha_MouseLeave(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
-        }
+        private void bttAlterarSenha_MouseLeave(object sender, EventArgs e) => Cursor = Cursors.Default;
 
-        private void bttAlterar_MouseHover(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Hand;
-        }
 
-        private void bttAlterar_MouseLeave(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
-        }
+        /// 
+        /// Eventos botão "OlharSenha"
+        /// 
 
-        private void picOlhaSenha_MouseHover(object sender, EventArgs e)
+        //Animação cursor botão "Olhar Senha"
+        private void picOlharSenha_MouseHover(object sender, EventArgs e)
         {
             mskNovaSenha.PasswordChar = '\u0000';
             mskConfirmarSenha.PasswordChar = '\u0000';
         }
 
-        private void picOlhaSenha_MouseLeave(object sender, EventArgs e)
+        private void picOlharSenha_MouseLeave(object sender, EventArgs e)
         {
             mskNovaSenha.PasswordChar = '*';
             mskConfirmarSenha.PasswordChar = '*';
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("A senha deve ter até 8 caracteres");
-        }
+        
     }
 }

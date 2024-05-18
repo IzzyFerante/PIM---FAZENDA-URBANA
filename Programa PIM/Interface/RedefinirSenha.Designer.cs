@@ -38,24 +38,16 @@ namespace Interface
             lblTexto = new Label();
             picInfoPalavraChave = new PictureBox();
             picInfoEmail = new PictureBox();
-            iconefechar = new PictureBox();
+            iconFechar = new PictureBox();
             bttConfirmar = new Button();
             panel1 = new Panel();
             panelicones = new Panel();
-            iconemaximizar1 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            iconeminimizar1 = new PictureBox();
-            iconerestaurar1 = new PictureBox();
             lblEsqueciPalavraChave = new Label();
             ((System.ComponentModel.ISupportInitialize)picInfoPalavraChave).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picInfoEmail).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconefechar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconFechar).BeginInit();
             panel1.SuspendLayout();
             panelicones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconemaximizar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconerestaurar1).BeginInit();
             SuspendLayout();
             // 
             // txtEmail
@@ -119,7 +111,8 @@ namespace Interface
             picInfoPalavraChave.TabIndex = 6;
             picInfoPalavraChave.TabStop = false;
             picInfoPalavraChave.Click += picInfoPalavraChave_Click;
-            picInfoPalavraChave.MouseHover += picInfoEmail_MouseHover;
+            picInfoPalavraChave.MouseHover += picInfoPalavraChave_MouseHover;
+            picInfoPalavraChave.MouseLeave += picInfoPalavraChave_MouseLeave;
             // 
             // picInfoEmail
             // 
@@ -130,21 +123,23 @@ namespace Interface
             picInfoEmail.SizeMode = PictureBoxSizeMode.Zoom;
             picInfoEmail.TabIndex = 7;
             picInfoEmail.TabStop = false;
+            picInfoEmail.Click += picInfoEmail_Click;
             picInfoEmail.MouseLeave += picInfoEmail_MouseLeave;
             picInfoEmail.MouseHover += picInfoEmail_MouseHover;
             // 
-            // iconefechar
+            // iconFechar
             // 
-            iconefechar.BackColor = Color.DarkOliveGreen;
-            iconefechar.Image = (Image)resources.GetObject("iconefechar.Image");
-            iconefechar.Location = new Point(627, 12);
-            iconefechar.Name = "iconefechar";
-            iconefechar.Size = new Size(20, 20);
-            iconefechar.SizeMode = PictureBoxSizeMode.Zoom;
-            iconefechar.TabIndex = 8;
-            iconefechar.TabStop = false;
-            iconefechar.Click += iconefechar_Click;
-            iconefechar.MouseHover += picInfoEmail_MouseHover;
+            iconFechar.BackColor = Color.DarkOliveGreen;
+            iconFechar.Image = (Image)resources.GetObject("iconFechar.Image");
+            iconFechar.Location = new Point(627, 12);
+            iconFechar.Name = "iconFechar";
+            iconFechar.Size = new Size(20, 20);
+            iconFechar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconFechar.TabIndex = 8;
+            iconFechar.TabStop = false;
+            iconFechar.Click += iconFechar_Click;
+            iconFechar.MouseLeave += iconFechar_MouseLeave;
+            iconFechar.MouseHover += iconFechar_MouseHover;
             // 
             // bttConfirmar
             // 
@@ -156,7 +151,8 @@ namespace Interface
             bttConfirmar.Text = "Confirmar";
             bttConfirmar.UseVisualStyleBackColor = true;
             bttConfirmar.Click += bttConfirmar_Click;
-            bttConfirmar.MouseHover += picInfoEmail_MouseHover;
+            bttConfirmar.MouseLeave += bttConfirmar_MouseLeave;
+            bttConfirmar.MouseHover += bttConfirmar_MouseHover;
             // 
             // panel1
             // 
@@ -182,47 +178,6 @@ namespace Interface
             panelicones.Size = new Size(128, 34);
             panelicones.TabIndex = 5;
             // 
-            // iconemaximizar1
-            // 
-            iconemaximizar1.Image = (Image)resources.GetObject("iconemaximizar1.Image");
-            iconemaximizar1.Location = new Point(75, 10);
-            iconemaximizar1.Name = "iconemaximizar1";
-            iconemaximizar1.Size = new Size(20, 20);
-            iconemaximizar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconemaximizar1.TabIndex = 4;
-            iconemaximizar1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(101, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(20, 20);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // iconeminimizar1
-            // 
-            iconeminimizar1.Image = (Image)resources.GetObject("iconeminimizar1.Image");
-            iconeminimizar1.Location = new Point(49, 10);
-            iconeminimizar1.Name = "iconeminimizar1";
-            iconeminimizar1.Size = new Size(20, 20);
-            iconeminimizar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconeminimizar1.TabIndex = 3;
-            iconeminimizar1.TabStop = false;
-            // 
-            // iconerestaurar1
-            // 
-            iconerestaurar1.Image = (Image)resources.GetObject("iconerestaurar1.Image");
-            iconerestaurar1.Location = new Point(75, 10);
-            iconerestaurar1.Name = "iconerestaurar1";
-            iconerestaurar1.Size = new Size(20, 20);
-            iconerestaurar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconerestaurar1.TabIndex = 2;
-            iconerestaurar1.TabStop = false;
-            iconerestaurar1.Visible = false;
-            // 
             // lblEsqueciPalavraChave
             // 
             lblEsqueciPalavraChave.AutoSize = true;
@@ -234,6 +189,8 @@ namespace Interface
             lblEsqueciPalavraChave.TabIndex = 11;
             lblEsqueciPalavraChave.Text = "Esqueci minha Palavra de Segurança";
             lblEsqueciPalavraChave.Click += lblEsqueciPalavraChave_Click;
+            lblEsqueciPalavraChave.MouseLeave += lblEsqueciPalavraChave_MouseLeave;
+            lblEsqueciPalavraChave.MouseHover += lblEsqueciPalavraChave_MouseHover;
             // 
             // RedefinirSenha
             // 
@@ -244,7 +201,7 @@ namespace Interface
             ControlBox = false;
             Controls.Add(lblEsqueciPalavraChave);
             Controls.Add(bttConfirmar);
-            Controls.Add(iconefechar);
+            Controls.Add(iconFechar);
             Controls.Add(picInfoEmail);
             Controls.Add(picInfoPalavraChave);
             Controls.Add(lblTexto);
@@ -262,45 +219,11 @@ namespace Interface
             TopMost = true;
             ((System.ComponentModel.ISupportInitialize)picInfoPalavraChave).EndInit();
             ((System.ComponentModel.ISupportInitialize)picInfoEmail).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconefechar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconFechar).EndInit();
             panel1.ResumeLayout(false);
             panelicones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconemaximizar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconerestaurar1).EndInit();
             ResumeLayout(false);
             PerformLayout();
-        }
-
-        private void bttConfirmar_Click(object sender, EventArgs e)
-        {
-            String Email = "teste@gmail.com";
-            String PalavraChave = "Teste";
-
-            if (txtEmail.Text == Email & txtPalavraChave.Text == PalavraChave)
-            {
-                MessageBox.Show("Dados corretos!");
-                RedefinirSenha2 RedefinirSenha2 = new RedefinirSenha2();
-                RedefinirSenha2.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Email ou Palavra de Segurança incorretos!\n\nVerifique as letras maiúsculas ou minúsculas.");
-            }
-        }
-
-        private void iconefechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Login Login = new Login();
-            Login.Show();
-        }
-
-        private void picInfoPalavraChave_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Digite a sua Palavra de Segurança que foi cadastrada no momento de criação da senha.");
         }
 
         #endregion
@@ -313,7 +236,7 @@ namespace Interface
         private Label lblTexto;
         private PictureBox picInfoPalavraChave;
         private PictureBox picInfoEmail;
-        private PictureBox iconefechar;
+        private PictureBox iconFechar;
         private Button bttConfirmar;
         private Panel panel1;
         private Panel panelicones;

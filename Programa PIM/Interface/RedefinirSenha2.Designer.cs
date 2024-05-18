@@ -29,43 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RedefinirSenha2));
-            iconefechar = new PictureBox();
+            iconFechar = new PictureBox();
             lblNovaSenha = new Label();
             lblConfirmarSenha = new Label();
             lblTexto = new Label();
             bttAlterarSenha = new Button();
             panel1 = new Panel();
-            panelicones = new Panel();
-            iconemaximizar1 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            iconeminimizar1 = new PictureBox();
-            iconerestaurar1 = new PictureBox();
-            picOlhaSenha = new PictureBox();
+            picOlharSenha = new PictureBox();
             mskNovaSenha = new MaskedTextBox();
             mskConfirmarSenha = new MaskedTextBox();
             lblCaracteresMax = new Label();
-            ((System.ComponentModel.ISupportInitialize)iconefechar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconFechar).BeginInit();
             panel1.SuspendLayout();
-            panelicones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconemaximizar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconerestaurar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picOlhaSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picOlharSenha).BeginInit();
             SuspendLayout();
             // 
-            // iconefechar
+            // iconFechar
             // 
-            iconefechar.AccessibleDescription = "Fechar";
-            iconefechar.BackColor = Color.DarkOliveGreen;
-            iconefechar.Image = (Image)resources.GetObject("iconefechar.Image");
-            iconefechar.Location = new Point(627, 12);
-            iconefechar.Name = "iconefechar";
-            iconefechar.Size = new Size(20, 20);
-            iconefechar.SizeMode = PictureBoxSizeMode.Zoom;
-            iconefechar.TabIndex = 9;
-            iconefechar.TabStop = false;
-            iconefechar.Click += iconefechar_Click;
+            iconFechar.AccessibleDescription = "Fechar";
+            iconFechar.BackColor = Color.DarkOliveGreen;
+            iconFechar.Image = (Image)resources.GetObject("iconFechar.Image");
+            iconFechar.Location = new Point(627, 12);
+            iconFechar.Name = "iconFechar";
+            iconFechar.Size = new Size(20, 20);
+            iconFechar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconFechar.TabIndex = 9;
+            iconFechar.TabStop = false;
+            iconFechar.Click += iconFechar_Click;
+            iconFechar.MouseLeave += iconFechar_MouseLeave;
+            iconFechar.MouseHover += iconFechar_MouseHover;
             // 
             // lblNovaSenha
             // 
@@ -107,13 +99,13 @@
             bttAlterarSenha.Text = "Alterar Senha";
             bttAlterarSenha.UseVisualStyleBackColor = true;
             bttAlterarSenha.Click += bttAlterarSenha_Click;
+            bttAlterarSenha.MouseLeave += bttAlterarSenha_MouseLeave;
             bttAlterarSenha.MouseHover += bttAlterarSenha_MouseHover;
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkOliveGreen;
-            panel1.Controls.Add(panelicones);
-            panel1.Controls.Add(iconefechar);
+            panel1.Controls.Add(iconFechar);
             panel1.Dock = DockStyle.Top;
             panel1.ImeMode = ImeMode.NoControl;
             panel1.Location = new Point(0, 0);
@@ -121,70 +113,18 @@
             panel1.Size = new Size(659, 100);
             panel1.TabIndex = 16;
             // 
-            // panelicones
+            // picOlharSenha
             // 
-            panelicones.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panelicones.AutoScroll = true;
-            panelicones.Controls.Add(iconemaximizar1);
-            panelicones.Controls.Add(pictureBox1);
-            panelicones.Controls.Add(iconeminimizar1);
-            panelicones.Controls.Add(iconerestaurar1);
-            panelicones.Location = new Point(1769, 0);
-            panelicones.Name = "panelicones";
-            panelicones.Size = new Size(128, 34);
-            panelicones.TabIndex = 5;
-            // 
-            // iconemaximizar1
-            // 
-            iconemaximizar1.Image = (Image)resources.GetObject("iconemaximizar1.Image");
-            iconemaximizar1.Location = new Point(75, 10);
-            iconemaximizar1.Name = "iconemaximizar1";
-            iconemaximizar1.Size = new Size(20, 20);
-            iconemaximizar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconemaximizar1.TabIndex = 4;
-            iconemaximizar1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(101, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(20, 20);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // iconeminimizar1
-            // 
-            iconeminimizar1.Image = (Image)resources.GetObject("iconeminimizar1.Image");
-            iconeminimizar1.Location = new Point(49, 10);
-            iconeminimizar1.Name = "iconeminimizar1";
-            iconeminimizar1.Size = new Size(20, 20);
-            iconeminimizar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconeminimizar1.TabIndex = 3;
-            iconeminimizar1.TabStop = false;
-            // 
-            // iconerestaurar1
-            // 
-            iconerestaurar1.Image = (Image)resources.GetObject("iconerestaurar1.Image");
-            iconerestaurar1.Location = new Point(75, 10);
-            iconerestaurar1.Name = "iconerestaurar1";
-            iconerestaurar1.Size = new Size(20, 20);
-            iconerestaurar1.SizeMode = PictureBoxSizeMode.Zoom;
-            iconerestaurar1.TabIndex = 2;
-            iconerestaurar1.TabStop = false;
-            iconerestaurar1.Visible = false;
-            // 
-            // picOlhaSenha
-            // 
-            picOlhaSenha.Image = (Image)resources.GetObject("picOlhaSenha.Image");
-            picOlhaSenha.InitialImage = (Image)resources.GetObject("picOlhaSenha.InitialImage");
-            picOlhaSenha.Location = new Point(438, 174);
-            picOlhaSenha.Name = "picOlhaSenha";
-            picOlhaSenha.Size = new Size(30, 20);
-            picOlhaSenha.SizeMode = PictureBoxSizeMode.Zoom;
-            picOlhaSenha.TabIndex = 17;
-            picOlhaSenha.TabStop = false;
+            picOlharSenha.Image = (Image)resources.GetObject("picOlharSenha.Image");
+            picOlharSenha.InitialImage = (Image)resources.GetObject("picOlharSenha.InitialImage");
+            picOlharSenha.Location = new Point(438, 174);
+            picOlharSenha.Name = "picOlharSenha";
+            picOlharSenha.Size = new Size(30, 20);
+            picOlharSenha.SizeMode = PictureBoxSizeMode.Zoom;
+            picOlharSenha.TabIndex = 17;
+            picOlharSenha.TabStop = false;
+            picOlharSenha.MouseLeave += picOlharSenha_MouseLeave;
+            picOlharSenha.MouseHover += picOlharSenha_MouseHover;
             // 
             // mskNovaSenha
             // 
@@ -222,7 +162,7 @@
             Controls.Add(lblCaracteresMax);
             Controls.Add(mskConfirmarSenha);
             Controls.Add(mskNovaSenha);
-            Controls.Add(picOlhaSenha);
+            Controls.Add(picOlharSenha);
             Controls.Add(bttAlterarSenha);
             Controls.Add(lblTexto);
             Controls.Add(lblConfirmarSenha);
@@ -233,32 +173,22 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RedefinirSenha2";
-            ((System.ComponentModel.ISupportInitialize)iconefechar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconFechar).EndInit();
             panel1.ResumeLayout(false);
-            panelicones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconemaximizar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconeminimizar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconerestaurar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picOlhaSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picOlharSenha).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox iconefechar;
+        private PictureBox iconFechar;
         private Label lblNovaSenha;
         private Label lblConfirmarSenha;
         private Label lblTexto;
         private Button bttAlterarSenha;
         private Panel panel1;
-        private Panel panelicones;
-        private PictureBox iconemaximizar1;
-        private PictureBox pictureBox1;
-        private PictureBox iconeminimizar1;
-        private PictureBox iconerestaurar1;
-        private PictureBox picOlhaSenha;
+        private PictureBox picOlharSenha;
         private MaskedTextBox mskNovaSenha;
         private MaskedTextBox mskConfirmarSenha;
         private Label lblCaracteresMax;

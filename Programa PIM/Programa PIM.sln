@@ -13,11 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{211B3AEF-822B-4430-A9BE-2AFAF45DA59F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB", "DB\DB.csproj", "{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DB\DAL.csproj", "{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{509B4519-A4DC-4164-AB3D-94D9F91EF9D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9} = {32E0C54F-DF6F-41D6-9F11-B13CF59FBAF9}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "Testes\Testes.csproj", "{F57627D6-CA94-4483-B434-A80F59D53D0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testes", "Testes\Testes.csproj", "{F57627D6-CA94-4483-B434-A80F59D53D0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.Data.Common;
 
 namespace Interface
 {
@@ -18,12 +19,11 @@ namespace Interface
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        ///
+        /// Eventos botão "Acessar"
+        ///
+        private void bttAcessar_Click(object sender, EventArgs e)
         {
             //String User = "admin";
             //String Password = "admin";
@@ -32,7 +32,7 @@ namespace Interface
             DadosLogin1.password = "admin";
 
 
-            if (Usuario_txt.Text == DadosLogin1.user & senha_msk.Text == DadosLogin1.password)
+            if (txtUsuario.Text == DadosLogin1.user & mskSenha.Text == DadosLogin1.password)
             {
                 MessageBox.Show("Acesso Liberado!");
                 Menu_Principal1 Menu_Principal1 = new Menu_Principal1();
@@ -45,32 +45,15 @@ namespace Interface
             }
         }
 
-        private void cancelar_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+            //Animação cursor botão "Acessar"
+        private void bttAcessar_MouseHover(object sender, EventArgs e) => Cursor = Cursors.Hand;
 
-        private void esqueceusnh_btn_Click(object sender, EventArgs e)
-        {
-            RedefinirSenha RedefinirSenha1 = new RedefinirSenha();
-            RedefinirSenha1.Show();
-            this.Hide();
-        }
-        private void picOlhaSenha_MouseHover(object sender, EventArgs e)
-        {
-            senha_msk.PasswordChar = '\u0000';
-        }
+        private void bttAcessar_MouseLeave(object sender, EventArgs e) => Cursor = Cursors.Default;
 
-        private void picOlhaSenha_MouseLeave(object sender, EventArgs e)
-        {
-            senha_msk.PasswordChar = '*';
-        }
 
-        private void iconefechar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        ///
+        /// Eventos do botão "Esqueci Minha Senha"
+        ///
         private void lblEsqueciSenha_Click(object sender, EventArgs e)
         {
             RedefinirSenha RedefinirSenha1 = new RedefinirSenha();
@@ -78,36 +61,47 @@ namespace Interface
             this.Hide();
         }
 
+        //Animação cursor e letra do botão "Esqueci Minha Senha"
         private void lblEsqueciSenha_MouseHover(object sender, EventArgs e)
         {
-            lblEsqueciSenha.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblEsqueciSenha.Font = new Font("Segoe UI", 8F, FontStyle.Underline, GraphicsUnit.Point);
             Cursor = Cursors.Hand;
         }
 
         private void lblEsqueciSenha_MouseLeave(object sender, EventArgs e)
         {
-            lblEsqueciSenha.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEsqueciSenha.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             Cursor = Cursors.Default;
         }
 
-        private void iconefechar_MouseHover(object sender, EventArgs e)
+
+        ///
+        /// Eventos botão "Fechar"
+        ///
+        private void iconFechar_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.Hand;
+            Application.Exit();
         }
 
-        private void iconefechar_MouseLeave(object sender, EventArgs e)
+            //Animação cursor icone "Fechar"
+        private void iconFechar_MouseHover(object sender, EventArgs e) => Cursor = Cursors.Hand;
+
+        private void iconFechar_MouseLeave(object sender, EventArgs e) => Cursor = Cursors.Default;
+
+
+        ///
+        /// Eventos botão "Olhar Senha"
+        ///
+
+        //Animação do botão "Olhar Senha"
+        private void picOlharSenha_MouseHover(object sender, EventArgs e)
         {
-            Cursor = Cursors.Default;
+            mskSenha.PasswordChar = '\u0000';
         }
 
-        private void acessar_btn_MouseHover(object sender, EventArgs e)
+        private void picOlharSenha_MouseLeave(object sender, EventArgs e)
         {
-            Cursor = Cursors.Hand;
-        }
-
-        private void acessar_btn_MouseLeave(object sender, EventArgs e)
-        {
-            Cursor = Cursors.Default;
+            mskSenha.PasswordChar = '*';
         }
     }
 }
