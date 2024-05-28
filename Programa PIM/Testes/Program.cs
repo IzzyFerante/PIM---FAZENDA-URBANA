@@ -1,4 +1,4 @@
-namespace InterfaceProgram
+namespace Testes
 {
     internal static class Program
     {

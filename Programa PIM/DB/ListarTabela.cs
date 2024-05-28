@@ -13,7 +13,7 @@ namespace DB
     {
         public bool Insert (/*objeto="tabela"*/ /*nome objeto*/)
         {
-            using var conn = new DBConnection();
+            using var conn = new DbConnection();
 
             string query = @"";
 
