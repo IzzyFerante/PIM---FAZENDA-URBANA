@@ -43,9 +43,10 @@
             Icone_produtos = new PictureBox();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
+            Clientes = new Label();
             label5 = new Label();
             label6 = new Label();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             panelicones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconemaximizar1).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)Icone_funcionario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Icone_vendas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Icone_produtos).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -140,9 +142,8 @@
             // 
             // Icone_fornecedor
             // 
-            Icone_fornecedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             Icone_fornecedor.Image = (Image)resources.GetObject("Icone_fornecedor.Image");
-            Icone_fornecedor.Location = new Point(457, 218);
+            Icone_fornecedor.Location = new Point(435, 44);
             Icone_fornecedor.Name = "Icone_fornecedor";
             Icone_fornecedor.Size = new Size(100, 105);
             Icone_fornecedor.SizeMode = PictureBoxSizeMode.Zoom;
@@ -151,9 +152,8 @@
             // 
             // Icone_cliente
             // 
-            Icone_cliente.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             Icone_cliente.Image = (Image)resources.GetObject("Icone_cliente.Image");
-            Icone_cliente.Location = new Point(683, 218);
+            Icone_cliente.Location = new Point(710, 53);
             Icone_cliente.Name = "Icone_cliente";
             Icone_cliente.Size = new Size(100, 105);
             Icone_cliente.SizeMode = PictureBoxSizeMode.Zoom;
@@ -162,9 +162,8 @@
             // 
             // Icone_funcionario
             // 
-            Icone_funcionario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             Icone_funcionario.Image = (Image)resources.GetObject("Icone_funcionario.Image");
-            Icone_funcionario.Location = new Point(227, 218);
+            Icone_funcionario.Location = new Point(154, 44);
             Icone_funcionario.Name = "Icone_funcionario";
             Icone_funcionario.Size = new Size(100, 105);
             Icone_funcionario.SizeMode = PictureBoxSizeMode.Zoom;
@@ -173,9 +172,8 @@
             // 
             // Icone_vendas
             // 
-            Icone_vendas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             Icone_vendas.Image = (Image)resources.GetObject("Icone_vendas.Image");
-            Icone_vendas.Location = new Point(573, 386);
+            Icone_vendas.Location = new Point(580, 223);
             Icone_vendas.Name = "Icone_vendas";
             Icone_vendas.Size = new Size(100, 105);
             Icone_vendas.SizeMode = PictureBoxSizeMode.Zoom;
@@ -184,9 +182,8 @@
             // 
             // Icone_produtos
             // 
-            Icone_produtos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             Icone_produtos.Image = (Image)resources.GetObject("Icone_produtos.Image");
-            Icone_produtos.Location = new Point(323, 386);
+            Icone_produtos.Location = new Point(276, 223);
             Icone_produtos.Name = "Icone_produtos";
             Icone_produtos.Size = new Size(100, 105);
             Icone_produtos.SizeMode = PictureBoxSizeMode.Zoom;
@@ -197,7 +194,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(227, 326);
+            label2.Location = new Point(148, 152);
             label2.Name = "label2";
             label2.Size = new Size(106, 23);
             label2.TabIndex = 13;
@@ -207,27 +204,27 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(457, 326);
+            label3.Location = new Point(435, 152);
             label3.Name = "label3";
             label3.Size = new Size(112, 23);
             label3.TabIndex = 14;
             label3.Text = "Fornecedores";
             // 
-            // label4
+            // Clientes
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(698, 326);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 23);
-            label4.TabIndex = 15;
-            label4.Text = "Clientes";
+            Clientes.AutoSize = true;
+            Clientes.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            Clientes.Location = new Point(725, 161);
+            Clientes.Name = "Clientes";
+            Clientes.Size = new Size(70, 23);
+            Clientes.TabIndex = 15;
+            Clientes.Text = "Clientes";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(334, 494);
+            label5.Location = new Point(283, 328);
             label5.Name = "label5";
             label5.Size = new Size(79, 23);
             label5.TabIndex = 16;
@@ -237,31 +234,41 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(590, 494);
+            label6.Location = new Point(593, 328);
             label6.Name = "label6";
             label6.Size = new Size(65, 23);
             label6.TabIndex = 17;
             label6.Text = "Vendas";
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel2.Controls.Add(Icone_funcionario);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(Clientes);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(Icone_produtos);
+            panel2.Controls.Add(Icone_vendas);
+            panel2.Controls.Add(Icone_fornecedor);
+            panel2.Controls.Add(Icone_cliente);
+            panel2.Location = new Point(0, 125);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(979, 361);
+            panel2.TabIndex = 18;
             // 
             // Menu_Principal1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(979, 572);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(Icone_produtos);
-            Controls.Add(Icone_vendas);
-            Controls.Add(Icone_funcionario);
-            Controls.Add(Icone_cliente);
-            Controls.Add(Icone_fornecedor);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Menu_Principal1";
             Text = "Menu_Principal1";
+            WindowState = FormWindowState.Maximized;
             Load += Menu_Principal1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -275,8 +282,9 @@
             ((System.ComponentModel.ISupportInitialize)Icone_funcionario).EndInit();
             ((System.ComponentModel.ISupportInitialize)Icone_vendas).EndInit();
             ((System.ComponentModel.ISupportInitialize)Icone_produtos).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -295,8 +303,9 @@
         private PictureBox Icone_produtos;
         private Label label2;
         private Label label3;
-        private Label label4;
+        private Label Clientes;
         private Label label5;
         private Label label6;
+        private Panel panel2;
     }
 }
