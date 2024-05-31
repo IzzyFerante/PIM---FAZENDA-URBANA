@@ -1,6 +1,6 @@
 using Interface.View;
 
-namespace Interface
+namespace teste
 {
     internal static class Program
     {
@@ -13,7 +13,7 @@ namespace Interface
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new RedefinirSenha());
         }
     }
 }
