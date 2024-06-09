@@ -49,10 +49,11 @@ namespace Interface.View
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-117, -59);
+            pictureBox1.Image = Properties.Resources.Doc1_page_0001_removebg1;
+            pictureBox1.Location = new Point(-155, -42);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(592, 599);
+            pictureBox1.Size = new Size(700, 620);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -60,7 +61,7 @@ namespace Interface.View
             // 
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            lblLogin.Location = new Point(481, 23);
+            lblLogin.Location = new Point(549, 23);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(110, 46);
             lblLogin.TabIndex = 1;
@@ -88,6 +89,7 @@ namespace Interface.View
             // 
             // txtUsuario
             // 
+            txtUsuario.CharacterCasing = CharacterCasing.Lower;
             txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtUsuario.Location = new Point(729, 169);
             txtUsuario.Name = "txtUsuario";
@@ -169,8 +171,8 @@ namespace Interface.View
             picInfoLogin.TabIndex = 14;
             picInfoLogin.TabStop = false;
             picInfoLogin.Click += picInfoLogin_Click;
-            picInfoLogin.MouseHover += picInfoLogin_MouseHover;
             picInfoLogin.MouseLeave += picInfoLogin_MouseLeave;
+            picInfoLogin.MouseHover += picInfoLogin_MouseHover;
             // 
             // Login
             // 
@@ -190,6 +192,7 @@ namespace Interface.View
             Controls.Add(lblLogin);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

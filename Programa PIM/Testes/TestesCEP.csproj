@@ -21,4 +21,19 @@
     <PackageReference Include="System.ServiceModel.Security" Version="6.0.*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="CadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastroFuncionario1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Funcionarios1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VisualizarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

@@ -1,19 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Text;
-using Dapper;
-using Npgsql;
-using System.Security.Cryptography;
-using NpgsqlTypes;
-using Npgsql.Schema;
-using Interface.Model;
+﻿using Interface.Model;
 
 
 namespace Interface.View
@@ -49,31 +34,41 @@ namespace Interface.View
             int result = AcoesLogin.AcessoLogin(txtUsuario.Text, mskSenha.Text);
             if (result == 1) // Login realizado com sucesso
             {
-                try
+                bool statusUsuario = AcoesLogin.StatusLogin(txtUsuario.Text);
+                if (statusUsuario == true)
                 {
-                    if (mskSenha.Text.Length > 8) //  É O PRIMEIRO ACESSO, pois a senha oficial tem apenas 8 caracteres
+                    try
                     {
-                        PrimeiroAcesso primeiroAcesso = new PrimeiroAcesso(txtUsuario.Text);
-                        MessageBox.Show("Olá! Seja bem vindo ao UrbanFarm Manager :)\n\nComo é o seu primeiro acesso, iremos te redirecionar para você criar a sua senha oficial.", "Primeiro Acesso");
-                        this.Hide();
-                        primeiroAcesso.Show();
+                        if (mskSenha.Text.Length > 8) //  É O PRIMEIRO ACESSO, pois a senha oficial tem apenas 8 caracteres
+                        {
+                            PrimeiroAcesso primeiroAcesso = new PrimeiroAcesso(txtUsuario.Text);
+                            MessageBox.Show("Olá! Seja bem vindo ao UrbanFarm Manager :)\n\nComo é o seu primeiro acesso, iremos te redirecionar para você criar a sua senha oficial.", "Primeiro Acesso");
+                            primeiroAcesso.Show();
+                            this.Hide();
+                        }
+                        else    // NÃO É O PRIMEIRO ACESSO
+                        {
+                            Menu menu1 = new Menu(txtUsuario.Text);
+                            MessageBox.Show("Login realizado com sucesso!", "Acesso permitido");
+                            menu1.Show();
+                            this.Hide();
+                        }
                     }
-                    else    // NÃO É O PRIMEIRO ACESSO
+                    catch (Exception ex)
                     {
-                        Menu menu1 = new Menu();
-                        MessageBox.Show("Login realizado com sucesso!", "Acesso permitido");
-                        this.Hide();
-                        menu1.Show();
+                        MessageBox.Show("Algo deu errado, tente novamente\n\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Algo deu errado, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Acesso bloqueado!\n\nUsuário está inativado, caso isso seja um erro, favor falar com seu Superior para correção", "Usuário inativo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
             else if (result == 0)
             {
-                MessageBox.Show("Usuário ou senha incorretos!", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                AcoeLogin acoes = new AcoeLogin();
+                string dicaSenha = acoes.ExtrairDicaSenha(txtUsuario.Text);
+                MessageBox.Show($"Usuário ou senha incorretos!\n\nDica de senha: {dicaSenha}", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -94,7 +89,6 @@ namespace Interface.View
                 bttAcessar.PerformClick();
             }
         }
-
         private void mskSenha_KeyDown(object sender, KeyEventArgs e)
         {
             // Verifica se a tecla pressionada é Enter
